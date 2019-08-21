@@ -4,6 +4,7 @@ import android.content.pm.ApplicationInfo
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.webkit.JavascriptInterface
 import android.webkit.WebSettings
@@ -60,6 +61,7 @@ class MainActivity : AppCompatActivity() {
     private inner class JavaScriptInterface {
         @JavascriptInterface
         fun textFromWeb(fromWeb: String) {
+            Log.d("webMsg", "value: $fromWeb")
             txt_from_web.text = fromWeb
         }
     }

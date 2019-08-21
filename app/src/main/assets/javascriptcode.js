@@ -26,3 +26,6 @@ document.body.appendChild(buttonContainer);
 function updateFromAndroid(message){
     nativeText.nodeValue = message;
 }
+function myFunction() {
+    nativeText.nodeValue = 'tried...';
+}
