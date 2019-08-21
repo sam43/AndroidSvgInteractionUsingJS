@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
                 WebView.setWebContentsDebuggingEnabled(true)
             }
         }
-
+        my_web_view.settings.builtInZoomControls = true
         my_web_view.settings.javaScriptEnabled = true
         my_web_view.addJavascriptInterface(JavaScriptInterface(), JAVASCRIPT_OBJ)
         my_web_view.webViewClient = object : WebViewClient() {
