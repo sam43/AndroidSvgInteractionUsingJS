@@ -52,16 +52,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun injectJavaScriptFunction() {
-        my_web_view.loadUrl("javascript: " +
-                "window.androidObj.textToAndroid = function(message) { " +
+        my_web_view.loadUrl("javascript: window.androidObj.textToAndroid = function(message) { " +
                 JAVASCRIPT_OBJ + ".textFromWeb(message) }")
+        /*my_web_view.loadUrl("javascript: window.androidObj.listToAndroid = function(list) { " +
+                JAVASCRIPT_OBJ + ".selectedListFromWeb(list) }")*/
     }
 
 
     private inner class JavaScriptInterface {
         @JavascriptInterface
         fun textFromWeb(fromWeb: String) {
-            Log.d("webMsg", "value: $fromWeb")
+            Log.d("chromium", "value: $fromWeb")
             txt_from_web.text = fromWeb
         }
     }
