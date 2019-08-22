@@ -33,7 +33,7 @@ function doSomething(e) {
 
     // console log tells you what you are clicking
     console.log("Hello " + clickedItem);
-    //window.androidObj.textToAndroid(clickedItem);
+    window.androidObj.a2And("a2And" + clickedItem);
     //document.getElementById('l_value').innerHTML = clickedItem;
   }
   e.stopPropagation();
